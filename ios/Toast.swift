@@ -12,16 +12,16 @@ import UIKit
 class Toast: UIView, RCTBridgeModule {
   
   static func moduleName() -> String!{
-    return "MyAlert";
+    return "Toast";
   }
   
   @objc static func requiresMainQueueSetup() -> Bool {
     return false
   }
   
-  @objc func showToast(_ message : String, duration: Double) {
-    
-    let toastLabel = UILabel(frame: CGRect(x: self.frame.size.width/2 - 75, y: self.frame.size.height-100, width: 150, height: 35))
+  @objc func showToast(_ message : String, duration: Double) -> Void {
+  
+    let toastLabel = UILabel(frame: CGRect(x: self.frame.size.width/2 - 75, y: self.frame.size.height-100, width: 100, height: 25))
     toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     toastLabel.textColor = UIColor.white
     toastLabel.textAlignment = .center;
@@ -36,6 +36,8 @@ class Toast: UIView, RCTBridgeModule {
       toastLabel.removeFromSuperview()
     })
   }
+  
+  
 }
 
 

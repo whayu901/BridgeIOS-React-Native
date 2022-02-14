@@ -11,7 +11,7 @@ import UIKit
 @objc(MyAlert)
 
 class MyAlert: NSObject, RCTBridgeModule{
-  
+    
   static func moduleName() -> String!{
     return "MyAlert";
   }

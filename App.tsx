@@ -1,21 +1,17 @@
-import React, {Component} from 'react';
-import {
-  Platform,
-  View,
-  Text,
-  NativeModules,
-  TouchableOpacity,
-} from 'react-native';
+import React, { Component } from "react";
+import { View, Text, NativeModules, TouchableOpacity } from "react-native";
 
-const Alert = NativeModules.MyAlert;
+const Alert: any = NativeModules.MyAlert;
+// const Toast: any = NativeModules.Toast;
 
 export default class App extends Component {
   render() {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <TouchableOpacity
           onPress={() => {
-            Alert.ShowMessage('Awesome!its working!', 2);
+            Alert.ShowMessage("Awesome!its working!", 3);
+            // Toast.showToast('Berhasil', 2);
           }}>
           <Text>Click Me!</Text>
         </TouchableOpacity>
